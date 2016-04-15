@@ -1,0 +1,23 @@
+{
+  "name": "jacobpaine.github.io",
+  "version": "1.0.0",
+  "description": "*A simple Jekyll + GitHub Pages powered resume template.*",
+  "main": "index.js",
+  "dependencies": {
+    "font-awesome": "^4.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobpaine/jacobpaine.github.io.git"
+  },
+  "author": "Jacob Paine <painejacob@gmail.com> (https://www.jacobpaine.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobpaine/jacobpaine.github.io/issues"
+  },
+  "homepage": "https://github.com/jacobpaine/jacobpaine.github.io#readme"
+}

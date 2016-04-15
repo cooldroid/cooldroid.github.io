@@ -1,37 +1,134 @@
+body {
+  background: 
+    // url("../images/background_old.png") 600px 10px no-repeat,
+      url("../images/background_old.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+#background1 {
+  // background: url("../images/background.png"); 
+}
+#background2 {
+  // background: url("../images/background_old.png");
+}
+
+p, ul, li, h1, h2, h3, h4, a{
+  font-family: Roboto;
+}
+
+  .icon-links-nav{
+    text-align: left;
+    vertical-align: middle;
+    margin-top: 5px;
+  }
+
+  .navbar {
+      font-family: Roboto, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.95;
+  }
+
+  // nav bar lettering before highlight
+  .navbar li a, .navbar .navbar-brand { 
+      color: #FFF !important;
+  }
+
+  // nav bar lettering on highlight
+  .navbar-nav li a:hover {
+  }
+
+  .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #2d2d30;
+  }
+
+  .navbar-nav li.active a {
+    background-color: #4D7C8A !important;
+  }
+
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+  }
+
+
 // Resme styles
 // ---------------------------------------/
 
 // util
 
 .section-header {
-  @include section_border;
   margin-bottom: 1.5rem;
 
   h2 {
     @include sans;
-    font-weight: 900;
-    font-size: 1.75rem;
+    font-weight: 700;
+    font-size: 2.40rem;
     letter-spacing: -.05rem;
     margin: 0;
   }
 }
 
-// page header styles
+.logo{
+    display: inline-block;
+    margin-top: 65px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10%;
+
+}
+  .avatar {
+    text-align: center;
+    width:140px;
+    height:160px;
+    overflow: hidden;
+    @include border-radius(100%);
+    margin-right: 30px;
+    display: inline-block;
+    padding:3px;
+
+    @media only screen and (max-width : 480px) {
+      width: 100%;
+      margin-left: 70px;
+    }
+
+
+  }
+
+  #avatarDiv {
+    text-align: center;
+    width: 150px;
+    padding: 1.5rem 0;
+
+  }
+
+    #executive-summary-p {
+    text-align: justify;
+    // width: 75%;
+    padding: 1.5rem 0;
+
+  }
 
 .page-header { padding: 1.5rem 0;
 
-  .avatar {
-    width: 95px;
-    max-width: 100%;
-    overflow: hidden;
-    @include border-radius(100px);
-    margin: 0 auto;
-    display: block;
-  }
 
   .header-name {
     @include sans;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
     text-align: center;
     letter-spacing: -.15rem;
@@ -40,7 +137,6 @@
   }
 
   .title-bar {
-    @include section_border;
     padding: .4rem 0;
     @include clearfix;
 
@@ -59,10 +155,37 @@
       }
     }
   }
-
+}
   .executive-summary {
-    @include media_larger_than_mobile { font-size: 1.125rem; }
+    background-color:#2D2D30;
+    color: #e7e7e7;
+
+    #exec-inner{
+      max-width: 728px;
+      padding: 0 24px;
+      margin: auto;
+      zoom: 1;
+    }
+
+    @media only screen and (max-width : 480px) {
+      width: 100%;
+      padding: 1.5rem 0;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include media_larger_than_mobile { 
+      font-family: Merriweather Sans;
+      font-size: 1.55rem;
+      width: 100%;
+      margin: 0 3rem 1rem 0;
+      padding: 1.5rem 0;
+    }
   }
+
+
+.icon-links-nav {
+  float: left;
 }
 
 .icon-links {
@@ -71,8 +194,7 @@
   list-style: none;
   position: relative;
   top: 4px;
-  text-align: center;
-  border-top: 2px solid #c7c7c7;
+  text-align: left;
   padding-top: .4rem;
 
   @include media_larger_than_mobile {
@@ -87,7 +209,6 @@
   }
 
   .icon-link { display: inline-block;
-
     &:hover .icon path {
       fill: #333;
       @include transition(all .2s ease);
@@ -97,7 +218,7 @@
 
 .contact-button {
   @include border-radius(3px);
-  background-color: #efefef;
+  background-color: #fff;
   text-decoration: none;
   text-align: center;
   display: block;
@@ -105,7 +226,7 @@
   width: 220px;
   font-size: 1.375rem;
   @include sans_light;
-  color: #333;
+  color: #000;
   line-height: 55px;
   @include transition(all .2s ease);
 
@@ -121,6 +242,7 @@
 
 .content-section {
   margin: 0 0 3rem;
+  font-family: Arimo;
 
   .resume-item { margin-bottom: 2rem; }
 
@@ -133,7 +255,7 @@
   }
 
   .resume-item-details {
-    font-size: 1.125rem;
+    font-size: 1.50rem;
     margin: 0 0 .75rem;
     line-height: 1;
   }
@@ -159,20 +281,17 @@
 
 // footer styles
 
-.page-footer {
-  border-top: 4px solid #c7c7c7;
-  padding-top: 1.5rem;
-  text-align: center;
-  margin-bottom: 3rem;
+.footer-line {
+  width: 100%;
+  font-size: .875rem;
+  color: #999;
 
-  .footer-line {
-    margin: 0;
-    font-size: .875rem;
-    color: #999;
-
-    > a {
-      font-weight: 700;
-      color: #333;
-    }
-  }
 }
+
+.page-footer {
+  width: 100%;
+  height:25px;
+  background-color: #2d2d30;
+  opacity: 0.95;
+}
+  
