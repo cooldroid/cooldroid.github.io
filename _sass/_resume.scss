@@ -92,18 +92,19 @@ p, ul, li, h1, h2, h3, h4, a{
 
 }
   .avatar {
-    text-align: center;
-    width:140px;
-    height:160px;
+    //text-align: center;
+    width:130px;
+    height:130px;
     overflow: hidden;
     @include border-radius(100%);
-    margin-right: 30px;
+    //margin-left: 40px;
+    //margin-right: 30px;
     display: inline-block;
-    padding:3px;
+    //padding:3px;
 
     @media only screen and (max-width : 480px) {
-      width: 100%;
-      margin-left: 70px;
+      //width: 100%;
+      //margin-left: 40px;
     }
 
 
@@ -111,20 +112,21 @@ p, ul, li, h1, h2, h3, h4, a{
 
   #avatarDiv {
     text-align: center;
-    width: 150px;
-    padding: 1.5rem 0;
+    //width: 150px;
+    //padding: 1.5rem 0;
 
   }
 
-    #executive-summary-p {
+  #executive-summary-p {
     text-align: justify;
     // width: 75%;
     padding: 1.5rem 0;
-
   }
 
-.page-header { padding: 1.5rem 0;
-
+.page-header { 
+  // padding: 1.5rem 0;
+  margin: 0 0 0;
+  border-bottom: none;
 
   .header-name {
     @include sans;
@@ -132,57 +134,66 @@ p, ul, li, h1, h2, h3, h4, a{
     font-weight: 900;
     text-align: center;
     letter-spacing: -.15rem;
-    line-height: 1;
+    // line-height: 1;
     margin: 1rem 0 2rem;
   }
 
-  .title-bar {
-    padding: .4rem 0;
-    @include clearfix;
+  .header-contact-info {
+    @include sans;
+    text-align: center;
+  }
+  .header-contact-info p a {
+    color: inherit;
+  }
+}
 
-    .header-title {
-      @include sans;
-      font-weight: 300;
-      font-size: 1.75rem;
-      line-height: 2rem;
-      letter-spacing: -.05rem;
-      text-align: center;
-      margin: 0 0 .5rem;
+.title-bar {
+  @include section_border;
+  padding: .4rem 0;
+  @include clearfix;
 
-      @include media_larger_than_mobile {
-        float: left;
-        margin: 0;
-      }
+  .header-title {
+    @include sans;
+    font-weight: 300;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    letter-spacing: -.05rem;
+    text-align: center;
+    margin: 0 0 .5rem;
+
+    @include media_larger_than_mobile {
+      float: left;
+      margin: 0;
     }
   }
 }
-  .executive-summary {
-    background-color:#2D2D30;
-    color: #e7e7e7;
 
-    #exec-inner{
-      max-width: 728px;
-      padding: 0 24px;
-      margin: auto;
-      zoom: 1;
-    }
+.executive-summary {
+  background-color:#2D2D30;
+  color: #e7e7e7;
 
-    @media only screen and (max-width : 480px) {
-      width: 100%;
-      padding: 1.5rem 0;
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    @include media_larger_than_mobile { 
-      font-family: Merriweather Sans;
-      font-size: 1.55rem;
-      width: 100%;
-      margin: 0 3rem 1rem 0;
-      padding: 1.5rem 0;
-    }
+  #exec-inner{
+    max-width: 728px;
+    padding: 0 24px;
+    margin: auto;
+    zoom: 1;
   }
 
+  @media only screen and (max-width : 480px) {
+    width: 100%;
+    padding: 1.5rem 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include media_larger_than_mobile { 
+    font-family: Merriweather Sans;
+    //font-size: 1.55rem;
+    width: 100%;
+    margin: 0 3rem 1rem 0;
+    padding: 1.5rem 0;
+  }
+}
 
 .icon-links-nav {
   float: left;
@@ -240,6 +251,17 @@ p, ul, li, h1, h2, h3, h4, a{
 
 // resume content styles
 
+.projWrapper{.wrapper{.content-section{
+  .resume-item-title {
+    border-top: 2px solid #c7c7c7;
+    padding-top: 1rem;
+  }
+  .resume-item-details {
+    border-bottom: 1px solid #c7c7c7;
+    padding-bottom: 1rem;
+  }
+}}}
+
 .content-section {
   margin: 0 0 3rem;
   font-family: Arimo;
@@ -249,7 +271,7 @@ p, ul, li, h1, h2, h3, h4, a{
   .resume-item-title {
     @include sans_bold;
     margin: 0 0 .75rem;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     letter-spacing: -.05rem;
     line-height: 1;
   }
